@@ -2,8 +2,8 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
 
 class Agenda extends Model
 {
@@ -14,6 +14,13 @@ class Agenda extends Model
     public $timestamps = true;
 
     protected $fillable = [
-        'keterangan'
+        'judul',
+        'keterangan',
+        'is_done'
+    ];
+
+    protected $casts = [
+        'is_done' => 'boolean'
     ];
 }
+

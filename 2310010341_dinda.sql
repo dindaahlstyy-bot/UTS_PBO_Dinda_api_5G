@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `agenda` (
   `id` int NOT NULL,
+  `judul` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL

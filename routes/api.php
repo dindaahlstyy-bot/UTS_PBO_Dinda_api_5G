@@ -18,9 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// CRUD Agenda
-Route::get('/agenda', [AgendaController::class, 'index']);         // GET semua data
-Route::get('/agenda/{id}', [AgendaController::class, 'show']);     // GET detail data
-Route::post('/agenda', [AgendaController::class, 'store']);        // POST tambah data
-Route::put('/agenda/{id}', [AgendaController::class, 'update']);   // PUT update data
-Route::delete('/agenda/{id}', [AgendaController::class, 'destroy']); // DELETE hapus data
+
+Route::get('/agenda', [AgendaController::class, 'index']);
+Route::get('/agenda/{id}', [AgendaController::class, 'show']);
+Route::post('/agenda', [AgendaController::class, 'store']);
+Route::put('/agenda/{id}', [AgendaController::class, 'update']);
+Route::delete('/agenda/{id}', [AgendaController::class, 'destroy']);
